@@ -16,6 +16,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pranav-portfolio-theta.vercel.app'),
   title: 'Pranav Chandrasekhar — AI Product Engineer',
   description: 'I build scalable backend systems, AI products, and polished front ends that deliver measurable impact. AutoSlate, DocuSynth, and SpedTree are live proofs.',
   keywords: ['Pranav Chandrasekhar', 'AI Engineer', 'Full Stack Developer', 'Indiana University', 'AutoSlate', 'DocuSynth', 'SpedTree'],
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pranav Chandrasekhar — AI Product Engineer',
     description: 'I build scalable backend systems, AI products, and polished front ends that deliver measurable impact.',
-    url: 'https://pranav.dev',
+    url: 'https://pranav-portfolio-theta.vercel.app',
     siteName: 'Pranav Chandrasekhar Portfolio',
     locale: 'en_US',
     type: 'website',
