@@ -65,7 +65,7 @@ html {
 
 /* Button hover effects */
 .btn-primary {
-  @apply relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white transition-all bg-primary-500 rounded-lg hover:bg-primary-600 group;
+  @apply relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white transition-all bg-primary-500 rounded-lg hover:bg-primary-600;
 }
 
 .btn-primary::before {

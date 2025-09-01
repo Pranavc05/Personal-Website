@@ -7,6 +7,7 @@ type Theme = 'dark' | 'light'
 type ThemeProviderContext = {
   theme: Theme
   toggleTheme: () => void
+  mounted: boolean
 }
 
 const ThemeProviderContext = createContext<ThemeProviderContext | undefined>(undefined)
@@ -14,7 +15,12 @@ const ThemeProviderContext = createContext<ThemeProviderContext | undefined>(und
 export function useTheme() {
   const context = useContext(ThemeProviderContext)
   if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider')
+    // Return a default context instead of throwing during SSR
+    return {
+      theme: 'light' as Theme,
+      toggleTheme: () => {},
+      mounted: false
+    }
   }
   return context
 }
@@ -59,13 +65,8 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark')
   }
 
-  // Prevent hydration mismatch
-  if (!mounted) {
-    return <div style={{ visibility: 'hidden' }}>{children}</div>
-  }
-
   return (
-    <ThemeProviderContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeProviderContext.Provider value={{ theme, toggleTheme, mounted }}>
       {children}
     </ThemeProviderContext.Provider>
   )
