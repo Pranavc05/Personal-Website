@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { projects } from '@/data/projects'
 import { TechBadge } from '@/components/TechBadge'
+import { LoomEmbed } from '@/components/LoomEmbed'
 
 export const metadata = {
   title: 'Projects | Pranav Chandrasekhar',
@@ -124,25 +125,15 @@ export default function ProjectsPage() {
                   </div>
                 </div>
 
-                {/* Project Image/Video Placeholder */}
+                {/* Project Demo Video */}
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <div className="video-container bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-lg border border-gray-200 dark:border-gray-700">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center space-y-4">
-                        <div className="w-16 h-16 mx-auto bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center">
-                          <svg className="w-8 h-8 text-primary-500" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                          </svg>
-                        </div>
-                        <div className="space-y-2">
-                          <p className="font-medium text-gray-900 dark:text-white">{project.title} Demo</p>
-                          <p className="text-sm text-gray-600 dark:text-gray-400">
-                            Video coming soon
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
+                  <div className="relative">
+                    <LoomEmbed 
+                      embedId={project.loomEmbedId} 
+                      videoFileName={project.videoFileName}
+                      title={`${project.title} Demo`}
+                    />
+                    
                     {/* Status indicator */}
                     <div className="absolute top-4 right-4 flex items-center gap-2 bg-white dark:bg-gray-800 rounded-full px-3 py-1 shadow-sm">
                       <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
