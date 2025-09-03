@@ -121,28 +121,39 @@ export function ProjectCarousel() {
                   </div>
                 </div>
 
-                {/* Project video/image */}
+                {/* Project CTA */}
                 <div className="relative">
-                  <div className="video-container bg-gray-100 dark:bg-gray-800 rounded-lg">
-                    {/* Placeholder for video */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center space-y-4">
-                        <div className="w-16 h-16 mx-auto bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
-                          <svg className="w-8 h-8 text-primary-500" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                          </svg>
-                        </div>
-                        <div className="space-y-2">
-                          <p className="font-medium text-gray-900 dark:text-white">Demo Coming Soon</p>
-                          <p className="text-sm text-gray-600 dark:text-gray-400">
-                            Loom video placeholder for {project.title}
-                          </p>
-                        </div>
+                  <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-lg border border-primary-200 dark:border-primary-700 p-12 text-center">
+                    <div className="space-y-6">
+                      <div className="w-20 h-20 mx-auto bg-primary-500 rounded-full flex items-center justify-center shadow-lg">
+                        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
                       </div>
+                      
+                      <div className="space-y-3">
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                          Explore {project.title}
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-400 max-w-sm mx-auto">
+                          Deep dive into the technical architecture, challenges solved, and business impact
+                        </p>
+                      </div>
+
+                      <Link
+                        href={`/projects/${project.id}`}
+                        className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-primary-500 rounded-lg hover:bg-primary-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                      >
+                        <span>View Complete Case Study</span>
+                        <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
                     </div>
                   </div>
                   
-                  {/* Project stats overlay */}
+                  {/* Project status indicator */}
                   <div className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 border border-gray-200 dark:border-gray-700">
                     <div className="flex items-center gap-3">
                       <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
