@@ -17,13 +17,13 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://personal-website-seven-theta-80.vercel.app'),
-  title: 'Pranav Chandrasekhar — AI Product Engineer',
+  title: 'Pranav Chandrasekhar — Software/AI Engineer',
   description: 'I build scalable backend systems, AI products, and polished front ends that deliver measurable impact. AutoSlate, DocuSynth, and Worksheet Generator are live proofs.',
   keywords: ['Pranav Chandrasekhar', 'AI Engineer', 'Full Stack Developer', 'Indiana University', 'AutoSlate', 'DocuSynth', 'Worksheet Generator'],
   authors: [{ name: 'Pranav Chandrasekhar' }],
   creator: 'Pranav Chandrasekhar',
   openGraph: {
-    title: 'Pranav Chandrasekhar — AI Product Engineer',
+    title: 'Pranav Chandrasekhar — Software/AI Engineer',
     description: 'I build scalable backend systems, AI products, and polished front ends that deliver measurable impact.',
     url: 'https://pranav-portfolio-theta.vercel.app',
     siteName: 'Pranav Chandrasekhar Portfolio',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pranav Chandrasekhar — AI Product Engineer',
+    title: 'Pranav Chandrasekhar — Software/AI Engineer',
     description: 'I build scalable backend systems, AI products, and polished front ends that deliver measurable impact.',
   },
   robots: {
