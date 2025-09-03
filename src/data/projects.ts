@@ -42,8 +42,7 @@ export const projects: Project[] = [
     ],
     impact: [
       'Live at 4 restaurants — 95%+ call answer rate',
-      '40% increase in reservations', 
-      '$10k+ saved annually'
+      '40% increase in reservations'
     ],
     keyFeatures: [
       '50+ language support with instant detection',

@@ -112,7 +112,7 @@ export default function AutoSlateProject() {
           </h2>
           <MetricsGrid metrics={project.metrics} />
           
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {project.impact.map((impact, index) => (
               <div key={index} className="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
                 <p className="text-gray-900 dark:text-white font-semibold">{impact}</p>
