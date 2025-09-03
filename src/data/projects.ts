@@ -116,10 +116,10 @@ export const projects: Project[] = [
   },
   {
     id: 'spedtree',
-    title: 'SpedTree',
-    subtitle: 'Worksheet Generator',
+    title: 'Worksheet Generator',
+    subtitle: 'AI Education Tool',
     oneLiner: 'Generates accessible, pedagogically-sound worksheets with images for special education teachers.',
-    description: 'The SpedTree Educational Worksheet Generator represents a groundbreaking fusion of artificial intelligence and special education technology, designed to revolutionize how educators create personalized learning materials for students with diverse learning needs.',
+    description: 'The Worksheet Generator represents a groundbreaking fusion of artificial intelligence and special education technology, designed to revolutionize how educators create personalized learning materials for students with diverse learning needs.',
     problem: 'Special education teachers face unprecedented challenges in creating individualized learning materials that cater to students with varying cognitive abilities and learning disabilities.',
     solution: 'Built a full-stack MERN application that leverages OpenAI models to generate contextually relevant educational content with accompanying visual aids, specifically designed for special education environments.',
     role: 'Full-stack lead — prompt engineering, DALL-E image pipeline, rate-limiting.',
@@ -154,7 +154,7 @@ export const projects: Project[] = [
       { label: 'Monthly Image Limit', value: '100' },
       { label: 'Target Audience', value: 'Special Ed' }
     ],
-    loomEmbedId: 'placeholder-spedtree-loom-id',
+    loomEmbedId: '9745df06102940ddbf2a59b9364a82d2',
     videoFileName: 'spedtree-demo.mp4'
   }
 ]
@@ -186,7 +186,7 @@ export const timelineData = [
   },
   {
     year: '2024',
-    title: 'SpedTree Education',
+    title: 'Worksheet Generator Launch',
     description: 'Launched AI worksheet generator for special education, piloted in multiple schools.',
     type: 'project' as const
   }

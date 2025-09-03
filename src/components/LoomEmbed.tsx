@@ -12,7 +12,7 @@ export function LoomEmbed({ embedId, videoFileName, title }: LoomEmbedProps) {
   const [showVideo, setShowVideo] = useState(false)
 
   // If we have a real Loom embed ID, show the iframe
-  if (embedId && embedId !== 'placeholder-autoslate-loom-id' && embedId !== 'placeholder-docusynth-loom-id' && embedId !== 'placeholder-spedtree-loom-id') {
+  if (embedId && !embedId.startsWith('placeholder-')) {
     return (
       <div className="video-container">
         <iframe

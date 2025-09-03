@@ -46,7 +46,7 @@ export function Hero() {
         <div className="max-w-2xl mx-auto">
           <p className="text-lg leading-8 text-gray-600 dark:text-gray-300">
             I'm a CS student at <span className="font-semibold text-primary-500">Indiana University</span> building 
-            production AI systems that solve real-world problems. My projects — AutoSlate, DocuSynth, and SpedTree — 
+            production AI systems that solve real-world problems. My projects — AutoSlate, DocuSynth, and Worksheet Generator — 
             show my drive to take ideas from prototype to production.
           </p>
         </div>
@@ -91,8 +91,8 @@ export function Hero() {
           
           <div className="group cursor-pointer">
             <Link href="/projects/spedtree" className="block p-6 rounded-lg bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:bg-white/80 dark:hover:bg-gray-800/80 transition-all">
-              <div className="font-semibold text-primary-500">SpedTree</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">AI Worksheet Generator</div>
+              <div className="font-semibold text-primary-500">Worksheet Generator</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">AI Education Tool</div>
               <div className="text-xs text-gray-500 dark:text-gray-500 mt-2">Piloted in schools</div>
             </Link>
           </div>

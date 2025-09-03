@@ -4,10 +4,10 @@ import { TechBadge } from '@/components/TechBadge'
 
 export const metadata = {
   title: 'Projects | Pranav Chandrasekhar',
-  description: 'Featured projects including AutoSlate, DocuSynth AI, and SpedTree - production systems that solve real-world problems.',
+  description: 'Featured projects including AutoSlate, DocuSynth AI, and Worksheet Generator - production systems that solve real-world problems.',
   openGraph: {
     title: 'Projects | Pranav Chandrasekhar',
-    description: 'Featured projects including AutoSlate, DocuSynth AI, and SpedTree - production systems that solve real-world problems.',
+    description: 'Featured projects including AutoSlate, DocuSynth AI, and Worksheet Generator - production systems that solve real-world problems.',
   },
 }
 
