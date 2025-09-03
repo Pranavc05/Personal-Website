@@ -19,9 +19,9 @@ export function LoomEmbed({ embedId, videoFileName, title }: LoomEmbedProps) {
           src={`https://www.loom.com/embed/${embedId}`}
           frameBorder="0"
           allowFullScreen
+          className="w-full h-full absolute top-0 left-0"
           title={title}
-          className="rounded-lg"
-        />
+        ></iframe>
       </div>
     )
   }
