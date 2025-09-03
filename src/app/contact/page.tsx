@@ -130,7 +130,7 @@ export default function ContactPage() {
               What Would You Like to Discuss?
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {contactReasons.map((reason, index) => (
                 <a
                   key={index}
