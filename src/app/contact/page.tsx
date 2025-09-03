@@ -40,12 +40,6 @@ const contactReasons = [
     title: 'General Discussion',
     description: 'Questions about my projects, tech stack choices, or just want to talk about AI and education.',
     action: 'Let\'s Talk'
-  },
-  {
-    icon: '🏢',
-    title: 'Speaking & Events',
-    description: 'Available for tech talks, hackathon judging, or student organization presentations.',
-    action: 'Book Speaking'
   }
 ]
 
