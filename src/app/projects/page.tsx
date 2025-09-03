@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { projects } from '@/data/projects'
 import { TechBadge } from '@/components/TechBadge'
-import { LoomEmbed } from '@/components/LoomEmbed'
 
 export const metadata = {
   title: 'Projects | Pranav Chandrasekhar',
@@ -106,7 +105,7 @@ export default function ProjectsPage() {
                       href={`/projects/${project.id}`}
                       className="btn-primary"
                     >
-                      <span>View Case Study</span>
+                      <span>Full Case Study</span>
                     </Link>
                     
                     {project.githubUrl && (
@@ -125,15 +124,37 @@ export default function ProjectsPage() {
                   </div>
                 </div>
 
-                {/* Project Demo Video */}
+                {/* Project Preview */}
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <div className="relative">
-                    <LoomEmbed 
-                      embedId={project.loomEmbedId} 
-                      videoFileName={project.videoFileName}
-                      title={`${project.title} Demo`}
-                    />
-                    
+                  <div className="relative bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-lg border border-primary-200 dark:border-primary-700 p-8 h-full flex items-center justify-center">
+                    <div className="text-center space-y-6">
+                      <div className="w-20 h-20 mx-auto bg-primary-500 rounded-full flex items-center justify-center shadow-lg">
+                        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                      </div>
+                      
+                      <div className="space-y-3">
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                          See {project.title} in Action
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-400 max-w-sm">
+                          {project.oneLiner}
+                        </p>
+                      </div>
+
+                      <Link
+                        href={`/projects/${project.id}`}
+                        className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-primary-500 rounded-lg hover:bg-primary-600 transition-colors shadow-sm hover:shadow-md"
+                      >
+                        <span>Watch Demo & Case Study</span>
+                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+
                     {/* Status indicator */}
                     <div className="absolute top-4 right-4 flex items-center gap-2 bg-white dark:bg-gray-800 rounded-full px-3 py-1 shadow-sm">
                       <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
