@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://pranav-portfolio-theta.vercel.app'),
+  metadataBase: new URL('https://personal-website-seven-theta-80.vercel.app'),
   title: 'Pranav Chandrasekhar — AI Product Engineer',
   description: 'I build scalable backend systems, AI products, and polished front ends that deliver measurable impact. AutoSlate, DocuSynth, and Worksheet Generator are live proofs.',
   keywords: ['Pranav Chandrasekhar', 'AI Engineer', 'Full Stack Developer', 'Indiana University', 'AutoSlate', 'DocuSynth', 'Worksheet Generator'],
