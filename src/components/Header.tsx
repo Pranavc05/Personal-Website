@@ -8,6 +8,7 @@ import { useTheme } from './ThemeProvider'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Projects', href: '/projects' },
+  { name: 'Experience', href: '/experience' },
   { name: 'About', href: '/about' },
   { name: 'Tech', href: '/tech' },
   { name: 'Contact', href: '/contact' },
