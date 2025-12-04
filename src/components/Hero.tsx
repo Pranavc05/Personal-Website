@@ -46,8 +46,8 @@ export function Hero() {
         <div className="max-w-2xl mx-auto">
           <p className="text-lg leading-8 text-gray-600 dark:text-gray-300">
             I'm a CS student at <span className="font-semibold text-primary-500">Indiana University</span> building 
-            production AI systems that solve real-world problems. My projects — AutoSlate, DocuSynth, and Worksheet Generator — 
-            show my drive to take ideas from prototype to production.
+            production AI systems that solve real-world problems. My projects — DataForge, AutoSlate, DocuSynth, and Worksheet Generator — 
+            showcase enterprise-scale engineering with measurable impact.
           </p>
         </div>
 
