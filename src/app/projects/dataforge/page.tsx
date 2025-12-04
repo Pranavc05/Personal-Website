@@ -9,12 +9,15 @@ if (!project) {
   notFound()
 }
 
+// TypeScript assertion - we know project exists after the notFound() check
+const projectData = project!
+
 export const metadata = {
-  title: `${project.title} | Pranav Chandrasekhar`,
-  description: project.description,
+  title: `${projectData.title} | Pranav Chandrasekhar`,
+  description: projectData.description,
   openGraph: {
-    title: `${project.title} | Pranav Chandrasekhar`,
-    description: project.description,
+    title: `${projectData.title} | Pranav Chandrasekhar`,
+    description: projectData.description,
   },
 }
 
@@ -27,19 +30,19 @@ export default function DataForgePage() {
           <div className="text-center space-y-6">
             <div className="flex items-center justify-center gap-3">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-                {project.title}
+                {projectData.title}
               </h1>
               <span className="px-4 py-2 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 rounded-full">
-                {project.subtitle}
+                {projectData.subtitle}
               </span>
             </div>
             
             <p className="text-xl text-blue-600 dark:text-blue-400 font-semibold">
-              {project.oneLiner}
+              {projectData.oneLiner}
             </p>
             
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              {project.description}
+              {projectData.description}
             </p>
           </div>
         </div>
@@ -51,7 +54,7 @@ export default function DataForgePage() {
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
             Enterprise Impact
           </h2>
-          <MetricsGrid metrics={project.metrics} />
+          <MetricsGrid metrics={projectData.metrics} />
         </div>
       </section>
 
@@ -65,7 +68,7 @@ export default function DataForgePage() {
                 The Problem
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {project.problem}
+                {projectData.problem}
               </p>
             </div>
             
@@ -75,7 +78,7 @@ export default function DataForgePage() {
                 My Solution
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {project.solution}
+                {projectData.solution}
               </p>
             </div>
           </div>
@@ -90,7 +93,7 @@ export default function DataForgePage() {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {project.keyFeatures.map((feature, index) => (
+            {projectData.keyFeatures.map((feature, index) => (
               <div key={index} className="flex items-start gap-4 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
                 <div className="flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
                   <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,7 +115,7 @@ export default function DataForgePage() {
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {project.techStack.map((tech, index) => (
+            {projectData.techStack.map((tech, index) => (
               <TechBadge key={index} tech={tech} />
             ))}
           </div>
