@@ -82,7 +82,15 @@ export function Hero() {
         </div>
 
         {/* Quick project previews */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          <div className="group cursor-pointer">
+            <Link href="/projects/dataforge" className="block p-6 rounded-lg bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border border-blue-200 dark:border-blue-700 hover:from-blue-100 hover:to-blue-150 dark:hover:from-blue-900/30 dark:hover:to-blue-800/30 transition-all">
+              <div className="font-semibold text-blue-600 dark:text-blue-400">DataForge</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">AI Data Platform</div>
+              <div className="text-xs text-blue-500 dark:text-blue-400 mt-2 font-medium">67% performance ↑</div>
+            </Link>
+          </div>
+          
           <div className="group cursor-pointer">
             <Link href="/projects/autoslate" className="block p-6 rounded-lg bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:bg-white/80 dark:hover:bg-gray-800/80 transition-all">
               <div className="font-semibold text-primary-500">AutoSlate</div>

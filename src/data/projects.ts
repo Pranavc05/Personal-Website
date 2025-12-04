@@ -23,6 +23,56 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'dataforge',
+    title: 'DataForge',
+    subtitle: 'AI Data Platform',
+    oneLiner: 'Enterprise AI-powered data warehouse orchestration platform combining Snowflake, Databricks, and Palantir capabilities.',
+    description: 'DataForge is a next-generation, AI-powered data warehouse orchestration platform that demonstrates mastery of advanced data engineering, artificial intelligence, and enterprise software architecture. It autonomously optimizes queries, manages schema evolution, and processes real-time streams at Fortune 500 scale.',
+    problem: 'Enterprise data systems suffer from query performance bottlenecks costing millions, schema evolution nightmares that break systems, cloud costs spiraling into six-figures monthly, and data quality issues leading to catastrophic business decisions.',
+    solution: 'Built an autonomous data intelligence platform with AI agents that continuously monitor, analyze, and optimize entire data infrastructures - like having a team of senior database engineers and data scientists working 24/7.',
+    role: 'Lead architect & AI engineer — designed multi-agent system, real-time streaming, and ML models.',
+    techStack: [
+      'Python 3.9+',
+      'FastAPI',
+      'PostgreSQL 15',
+      'OpenAI GPT-4',
+      'LangChain',
+      'Apache Kafka',
+      'Redis',
+      'Scikit-learn',
+      'Docker',
+      'JWT Auth'
+    ],
+    impact: [
+      '67% average query performance improvement via AI',
+      '30-50% cloud data warehouse cost reduction',
+      '10,000+ events per second real-time processing',
+      '99.9% uptime with automated monitoring'
+    ],
+    keyFeatures: [
+      'AI agents for autonomous query optimization using GPT-4',
+      'Intelligent schema evolution with impact prediction',
+      'Real-time cost optimization engine with ML forecasting',
+      'Advanced streaming architecture with Kafka & Redis',
+      'Enterprise security with 6-level RBAC and JWT',
+      'Multiple demo formats: Web, Terminal, Jupyter'
+    ],
+    challenges: [
+      'Implemented sophisticated AI agent orchestration with LangChain for complex reasoning workflows',
+      'Built real-time streaming system processing 10k+ events/sec with exactly-once semantics',
+      'Designed enterprise-grade security with hierarchical permissions and audit logging'
+    ],
+    metrics: [
+      { label: 'Query Performance', value: '67% ↑' },
+      { label: 'Cost Reduction', value: '30-50%' },
+      { label: 'Events/Second', value: '10K+' },
+      { label: 'System Uptime', value: '99.9%' },
+      { label: 'AI Agents', value: '3' }
+    ],
+    loomEmbedId: 'placeholder-dataforge-loom-id',
+    videoFileName: 'dataforge-demo.mp4'
+  },
+  {
     id: 'autoslate',
     title: 'AutoSlate',
     subtitle: 'AI Phone Agent',

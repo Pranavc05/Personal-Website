@@ -7,8 +7,10 @@ const techIcons: Record<string, string> = {
   'FastAPI': '🚀',
   'Twilio': '📞',
   'OpenAI GPT-3.5': '🤖',
+  'OpenAI GPT-4': '🧠',
   'ElevenLabs': '🎤',
   'PostgreSQL': '🐘',
+  'PostgreSQL 15': '🐘',
   'Docker': '🐳',
   'Railway': '🚂',
   'NVIDIA NeMo': '🧠',
@@ -23,14 +25,21 @@ const techIcons: Record<string, string> = {
   'MongoDB': '🍃',
   'Auth0': '🔐',
   'Render.com': '☁️',
+  'Python 3.9+': '🐍',
+  'Apache Kafka': '📊',
+  'Redis': '⚡',
+  'Scikit-learn': '📈',
+  'JWT Auth': '🔐',
 }
 
 const techColors: Record<string, string> = {
   'FastAPI': 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
   'Twilio': 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400',
   'OpenAI GPT-3.5': 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400',
+  'OpenAI GPT-4': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-400',
   'ElevenLabs': 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400',
   'PostgreSQL': 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400',
+  'PostgreSQL 15': 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400',
   'Docker': 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400',
   'Railway': 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300',
   'NVIDIA NeMo': 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
@@ -45,6 +54,11 @@ const techColors: Record<string, string> = {
   'MongoDB': 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
   'Auth0': 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400',
   'Render.com': 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400',
+  'Python 3.9+': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400',
+  'Apache Kafka': 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400',
+  'Redis': 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400',
+  'Scikit-learn': 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
+  'JWT Auth': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-400',
 }
 
 export function TechBadge({ tech }: TechBadgeProps) {
