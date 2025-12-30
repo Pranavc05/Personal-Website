@@ -70,7 +70,7 @@ export const projects: Project[] = [
       { label: 'AI Agents', value: '3' }
     ],
     loomEmbedId: 'placeholder-dataforge-loom-id',
-    videoFileName: 'Screen Recording 2025-12-30 at 9.42.46 AM.mov'
+    videoFileName: 'dataforge-demo.mp4'
   },
   {
     id: 'autoslate',
