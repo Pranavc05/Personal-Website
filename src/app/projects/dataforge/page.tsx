@@ -1,5 +1,6 @@
 import { projects } from '@/data/projects'
 import { notFound } from 'next/navigation'
+import { LoomEmbed } from '@/components/LoomEmbed'
 import { TechBadge } from '@/components/TechBadge'
 import { MetricsGrid } from '@/components/MetricsGrid'
 import Link from 'next/link'
@@ -82,6 +83,20 @@ export default function DataForgePage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Demo Video */}
+      <section className="py-16 px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+            AI Data Orchestration in Action
+          </h2>
+          <LoomEmbed 
+            embedId={projectData.loomEmbedId} 
+            videoFileName={projectData.videoFileName}
+            title={`${projectData.title} Demo`}
+          />
         </div>
       </section>
 
