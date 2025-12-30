@@ -33,9 +33,9 @@ export function LoomEmbed({ embedId, videoFileName, title }: LoomEmbedProps) {
         <video
           controls
           className="rounded-lg"
-          poster={`/images/${videoFileName.replace('.mp4', '-poster.jpg')}`}
+          poster={`/images/${videoFileName.replace(/\.(mp4|mov)$/, '-poster.jpg')}`}
         >
-          <source src={`/videos/${videoFileName}`} type="video/mp4" />
+          <source src={`/videos/${videoFileName}`} type={videoFileName.endsWith('.mov') ? 'video/quicktime' : 'video/mp4'} />
           Your browser does not support the video tag.
         </video>
       </div>
