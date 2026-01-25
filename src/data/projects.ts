@@ -64,7 +64,8 @@ export const projects: Project[] = [
     metrics: [
       { label: 'Students', value: '1,200+' },
       { label: 'Teachers', value: '50+' },
-      { label: 'Districts', value: '10 + Dubai' },
+      { label: 'Bay Area Districts', value: '10+' },
+      { label: 'Dubai School', value: '1' },
       { label: 'Uptime', value: '99.5%' },
       { label: 'API Speedup', value: '10–100x' }
     ],
