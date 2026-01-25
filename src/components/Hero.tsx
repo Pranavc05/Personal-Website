@@ -46,7 +46,7 @@ export function Hero() {
         <div className="max-w-2xl mx-auto">
           <p className="text-lg leading-8 text-gray-600 dark:text-gray-300">
             I'm a CS student at <span className="font-semibold text-primary-500">Indiana University</span> building 
-            production AI systems that solve real-world problems. My projects — DataForge, AutoSlate, DocuSynth, and Worksheet Generator — 
+            production AI systems that solve real-world problems. My projects — KAI, DataForge, AutoSlate, DocuSynth, and Worksheet Generator — 
             showcase enterprise-scale engineering with measurable impact.
           </p>
         </div>
@@ -82,7 +82,15 @@ export function Hero() {
         </div>
 
         {/* Quick project previews */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
+          <div className="group cursor-pointer">
+            <Link href="/projects/kai" className="block p-6 rounded-lg bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 border border-purple-200 dark:border-purple-700 hover:from-purple-100 hover:to-purple-150 dark:hover:from-purple-900/30 dark:hover:to-purple-800/30 transition-all">
+              <div className="font-semibold text-purple-600 dark:text-purple-400">KAI (WritePathAI)</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">AI Reading Platform</div>
+              <div className="text-xs text-purple-500 dark:text-purple-400 mt-2 font-medium">1.2K+ students</div>
+            </Link>
+          </div>
+          
           <div className="group cursor-pointer">
             <Link href="/projects/dataforge" className="block p-6 rounded-lg bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border border-blue-200 dark:border-blue-700 hover:from-blue-100 hover:to-blue-150 dark:hover:from-blue-900/30 dark:hover:to-blue-800/30 transition-all">
               <div className="font-semibold text-blue-600 dark:text-blue-400">DataForge</div>

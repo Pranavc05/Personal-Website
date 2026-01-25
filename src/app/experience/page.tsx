@@ -15,37 +15,48 @@ const workExperience = [
     company: 'Stanford Accelerator for Learning',
     role: 'Software Engineer Intern',
     location: 'Palo Alto, CA',
-    period: 'May 2025 – Present',
-    status: 'current',
+    period: 'May 2025 – Sep 2025',
+    status: 'completed',
     type: 'Software Engineering',
-    description: 'Building next-generation educational technology at Stanford\'s premier learning innovation lab.',
+    description: 'Core engineer on KAI (WritePathAI), an AI-powered reading platform used by 1,200+ students and 50 teachers across 10 Bay Area districts and a Dubai school.',
     keyProjects: [
       {
-        name: 'Teacher Dashboard Platform',
-        description: 'Architected and built a comprehensive teacher dashboard with 15+ interactive features including real-time student progress tracking and automated PDF generation.',
-        technologies: ['React', 'Redux', 'TypeScript', 'Material-UI', 'Node.js'],
+        name: 'Teacher Dashboard & Live Analytics',
+        description: 'Architected and rebuilt the teacher dashboard end-to-end (React/Redux, MUI) with real-time student metrics, focus skill computation, and timeline analysis.',
+        technologies: ['React', 'Redux', 'TypeScript', 'Material-UI', 'Vite'],
         achievements: [
-          '40% faster teacher workflow through intelligent automation',
-          'Analytics platform serving 50+ student metrics',
-          '12+ reusable components for scalable development',
-          'Redux state management for 8+ complex data types'
+          'Shipped 15+ interactive analytics features with <200ms client renders',
+          'Raised dashboard adoption to 50+ teachers; 1,200+ students monitored live',
+          'Created 12+ reusable UI components and resilient loading/state patterns',
+          'Eliminated blocking spinners and broken modals through structural refactors'
         ]
       },
       {
-        name: 'AI-Powered Testing System',
-        description: 'Pioneered the use of Smol Agent, an AI-based autonomous browser testing tool, to simulate end-to-end user flows through custom prompt engineering.',
-        technologies: ['Smol Agent', 'AI Testing', 'Prompt Engineering', 'Browser Automation'],
+        name: 'Real-Time Metrics APIs & Caching',
+        description: 'Built the backend analytics layer (Flask, Cosmos DB, Redis) that powers the dashboard with cached metrics, batch jobs, and GPT-4-evaluated student responses.',
+        technologies: ['Flask', 'Azure Cosmos DB', 'Redis', 'OpenAI GPT-4', 'Azure Monitor'],
         achievements: [
-          'Enhanced early-stage UX validation with autonomous testing',
-          'Reduced manual QA time by automating complex user flows',
-          'Custom prompt engineering for realistic user interactions',
-          'Improved product reliability before user-facing releases'
+          '5 APIs delivering org/class/student insights with cache-first responses (10–100x faster)',
+          'Daily batch jobs recomputing metrics and archiving stale cache for thousands of activities',
+          'LLM-evaluated answers transformed into strengths/weaknesses and narrative reports for teachers',
+          '99.5% observed uptime across multi-district deployments'
+        ]
+      },
+      {
+        name: 'Production QA & Launch',
+        description: 'Led QA and release-readiness: cross-browser testing, load tests, bug triage from real classrooms, and hotfixes during live pilots.',
+        technologies: ['Playwright', 'API Load Testing', 'Logging/Alerting', 'Release Checklists'],
+        achievements: [
+          'Resolved 15+ critical production bugs before district rollouts',
+          'Stabilized CORS/proxy issues and fixed data loading deadlocks',
+          'Coordinated go-live with educators, PMs, and AI engineers under tight timelines',
+          'Kept production stable while handling live student traffic and teacher feedback'
         ]
       }
     ],
-    teamwork: 'Collaborated closely with Stanford researchers, product managers, and fellow engineers to deliver features that directly impact K-12 education. Led cross-functional discussions on technical architecture and user experience design.',
-    impact: 'Contributing to educational technology that reaches thousands of students and teachers across multiple school districts, helping bridge the digital divide in education.',
-    skills: ['React/Redux', 'TypeScript', 'AI Testing', 'Product Development', 'Educational Technology', 'Cross-functional Collaboration'],
+    teamwork: 'Partnered daily with educators, AI researchers, PMs, and accessibility specialists to translate classroom needs into shipped features. Ran feedback loops with teachers, resolved live issues, and aligned releases with district stakeholders.',
+    impact: 'Enabled data-driven instruction for 1,200+ students and 50 teachers across 10 districts (plus a Dubai pilot) with reliable, real-time insights and AI-evaluated feedback.',
+    skills: ['React/Redux', 'TypeScript', 'Flask', 'Azure Cosmos DB', 'Redis Caching', 'OpenAI GPT-4', 'Observability', 'Cross-functional Collaboration', 'QA & Release Engineering'],
     companyInfo: {
       focus: 'Educational Technology Innovation',
       mission: 'Transforming learning through cutting-edge technology and research-backed solutions.'

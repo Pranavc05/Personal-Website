@@ -23,6 +23,55 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'kai',
+    title: 'KAI (WritePathAI)',
+    subtitle: 'AI Reading Platform',
+    oneLiner: 'AI-powered reading comprehension platform serving 1,200+ students and 50 teachers across 10 districts (plus a Dubai school).',
+    description: 'KAI delivers adaptive reading practice, AI-evaluated feedback, and a real-time teacher dashboard. I was a core engineer building the analytics backend, caching layer, and the React/Redux dashboard that educators rely on daily.',
+    problem: 'Teachers lack time for personalized assessment; students reading below grade level need immediate, adaptive feedback.',
+    solution: 'Built an end-to-end system: GPT-4-evaluated responses, cached metrics APIs, batch jobs, and an interactive dashboard that surfaces strengths, weaknesses, and trends in real time.',
+    role: 'Core engineer — built teacher dashboard, analytics APIs, caching, and QA for production rollouts.',
+    techStack: [
+      'React 18',
+      'Redux',
+      'Material-UI',
+      'Vite',
+      'Flask',
+      'Azure Cosmos DB',
+      'Redis',
+      'OpenAI GPT-4',
+      'Azure Monitor',
+      'Playwright'
+    ],
+    impact: [
+      'Serves 1,200+ students, 50 teachers across 10 districts plus a Dubai school',
+      'Dashboard loads 10–100x faster via cache-first metrics APIs',
+      'Resolved 15+ production blockers before district rollouts',
+      '99.5% observed uptime during live classroom usage'
+    ],
+    keyFeatures: [
+      'Real-time teacher dashboard with focus-skill computation and timelines',
+      'AI-evaluated student responses with strengths/weaknesses summaries',
+      'Caching + batch jobs for org/class/student metrics at scale',
+      'Tutorial center with role-based access and video content',
+      'Robust loading/state management preventing UI deadlocks'
+    ],
+    challenges: [
+      'Designed cache-first analytics with Redis + daily batch recompute',
+      'Fixed CORS/proxy and loading deadlocks across dashboard flows',
+      'QA’d cross-browser/device and triaged live classroom issues in production'
+    ],
+    metrics: [
+      { label: 'Students', value: '1,200+' },
+      { label: 'Teachers', value: '50+' },
+      { label: 'Districts', value: '10 + Dubai' },
+      { label: 'Uptime', value: '99.5%' },
+      { label: 'API Speedup', value: '10–100x' }
+    ],
+    loomEmbedId: 'placeholder-kai-loom-id',
+    videoFileName: 'kai-demo.mp4'
+  },
+  {
     id: 'dataforge',
     title: 'DataForge',
     subtitle: 'AI Data Platform',
@@ -210,6 +259,12 @@ export const projects: Project[] = [
 
 export const timelineData = [
   {
+    year: '2025',
+    title: 'KAI (WritePathAI) Multi-District Launch',
+    description: 'Shipped teacher analytics and caching layer for KAI, now serving 1,200+ students and 50 teachers across 10 districts and a Dubai school.',
+    type: 'project' as const
+  },
+  {
     year: '2023',
     title: 'Indiana University',
     description: 'Started Computer Science with Informatics specialization. Joined Alpha Kappa Psi business fraternity.',
@@ -243,7 +298,7 @@ export const timelineData = [
 
 export const personalInfo = {
   name: 'Pranav Chandrasekhar',
-  title: 'AI Product Engineer',
+  title: 'Software/AI Engineer',
   location: 'Indiana University',
   email: 'pranav2005.chandrasekhar@gmail.com',
   bio: `I'm Pranav Chandrasekhar — a CS student at Indiana University who builds AI-first products for real users. I design and ship full-stack systems (FastAPI, Node, Next.js) that solve production problems: automating restaurant calls, generating docs for codebases, and creating accessible educational materials.
