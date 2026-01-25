@@ -54,7 +54,7 @@ export default function KAIPage() {
               10+ Bay Area districts
             </span>
             <span className="px-3 py-1 rounded-full text-sm font-medium bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200">
-              1 Dubai school
+              1 school in Dubai
             </span>
             <span className="px-3 py-1 rounded-full text-sm font-medium bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200">
               Cache-first analytics APIs

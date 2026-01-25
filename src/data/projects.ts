@@ -26,7 +26,7 @@ export const projects: Project[] = [
     id: 'kai',
     title: 'KAI',
     subtitle: 'AI Reading Platform',
-    oneLiner: 'AI-powered reading comprehension platform serving 1,200+ students and 50 teachers across 10 districts (plus a Dubai school).',
+    oneLiner: 'AI-powered reading comprehension platform serving 1,200+ students and 50 teachers across 10 districts (plus a school in Dubai).',
     description: 'KAI delivers adaptive reading practice, AI-evaluated feedback, and a real-time teacher dashboard. I was a core engineer building the analytics backend, caching layer, and the React/Redux dashboard that educators rely on daily.',
     problem: 'Teachers lack time for personalized assessment; students reading below grade level need immediate, adaptive feedback.',
     solution: 'Built an end-to-end system: GPT-4-evaluated responses, cached metrics APIs, batch jobs, and an interactive dashboard that surfaces strengths, weaknesses, and trends in real time.',
@@ -44,7 +44,7 @@ export const projects: Project[] = [
       'Playwright'
     ],
     impact: [
-      'Serves 1,200+ students, 50 teachers across 10 districts plus a Dubai school',
+      'Serves 1,200+ students, 50 teachers across 10 districts plus a school in Dubai',
       'Dashboard loads 10–100x faster via cache-first metrics APIs',
       'Resolved 15+ production blockers before district rollouts',
       '99.5% observed uptime during live classroom usage'
@@ -65,7 +65,7 @@ export const projects: Project[] = [
       { label: 'Students', value: '1,200+' },
       { label: 'Teachers', value: '50+' },
       { label: 'Bay Area Districts', value: '10+' },
-      { label: 'Dubai School', value: '1' },
+      { label: 'School in Dubai', value: '1' },
       { label: 'Uptime', value: '99.5%' },
       { label: 'API Speedup', value: '10–100x' }
     ],
@@ -262,7 +262,7 @@ export const timelineData = [
   {
     year: '2025',
     title: 'KAI Multi-District Launch',
-    description: 'Shipped teacher analytics and caching layer for KAI, now serving 1,200+ students and 50 teachers across 10 districts and a Dubai school.',
+    description: 'Shipped teacher analytics and caching layer for KAI, now serving 1,200+ students and 50 teachers across 10 districts and a school in Dubai.',
     type: 'project' as const
   },
   {
