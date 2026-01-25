@@ -61,7 +61,7 @@ export default function ContactPage() {
           <div className="mt-8 inline-flex items-center gap-3 px-4 py-2 bg-green-50 dark:bg-green-900/20 rounded-full">
             <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
             <span className="text-sm font-medium text-green-800 dark:text-green-200">
-              Available for Summer 2025 internships
+              Available for Summer 2026 internships
             </span>
           </div>
         </div>
