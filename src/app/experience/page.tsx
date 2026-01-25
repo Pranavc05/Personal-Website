@@ -18,7 +18,7 @@ const workExperience = [
     period: 'May 2025 – Sep 2025',
     status: 'completed',
     type: 'Software Engineering',
-    description: 'Core engineer on KAI (WritePathAI), an AI-powered reading platform used by 1,200+ students and 50 teachers across 10 Bay Area districts and a Dubai school.',
+    description: 'Core engineer on KAI, an AI-powered reading platform used by 1,200+ students and 50 teachers across 10 Bay Area districts and a Dubai school.',
     keyProjects: [
       {
         name: 'Teacher Dashboard & Live Analytics',

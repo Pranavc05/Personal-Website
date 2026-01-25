@@ -85,7 +85,7 @@ export function Hero() {
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
           <div className="group cursor-pointer">
             <Link href="/projects/kai" className="block p-6 rounded-lg bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 border border-purple-200 dark:border-purple-700 hover:from-purple-100 hover:to-purple-150 dark:hover:from-purple-900/30 dark:hover:to-purple-800/30 transition-all">
-              <div className="font-semibold text-purple-600 dark:text-purple-400">KAI (WritePathAI)</div>
+              <div className="font-semibold text-purple-600 dark:text-purple-400">KAI</div>
               <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">AI Reading Platform</div>
               <div className="text-xs text-purple-500 dark:text-purple-400 mt-2 font-medium">1.2K+ students</div>
             </Link>

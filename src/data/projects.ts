@@ -24,7 +24,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'kai',
-    title: 'KAI (WritePathAI)',
+    title: 'KAI',
     subtitle: 'AI Reading Platform',
     oneLiner: 'AI-powered reading comprehension platform serving 1,200+ students and 50 teachers across 10 districts (plus a Dubai school).',
     description: 'KAI delivers adaptive reading practice, AI-evaluated feedback, and a real-time teacher dashboard. I was a core engineer building the analytics backend, caching layer, and the React/Redux dashboard that educators rely on daily.',
@@ -260,7 +260,7 @@ export const projects: Project[] = [
 export const timelineData = [
   {
     year: '2025',
-    title: 'KAI (WritePathAI) Multi-District Launch',
+    title: 'KAI Multi-District Launch',
     description: 'Shipped teacher analytics and caching layer for KAI, now serving 1,200+ students and 50 teachers across 10 districts and a Dubai school.',
     type: 'project' as const
   },
