@@ -11,6 +11,55 @@ export const metadata = {
 
 const workExperience = [
   {
+    id: 'aurus-ai',
+    company: 'Aurus.ai',
+    role: 'Software Engineer (Agentic AI)',
+    location: 'Remote',
+    period: 'Sep 2025 – Nov 2025',
+    status: 'completed',
+    type: 'AI & Fintech',
+    description: 'Built agentic AI for DoKrunch to automate mortgage loan processing, cutting underwriter review time from 4–8 hours to 15–30 minutes with higher accuracy and fraud detection.',
+    keyProjects: [
+      {
+        name: 'Agent Orchestrator',
+        description: 'Designed the master orchestrator to pick optimal workflows (simple/standard/high-risk) and coordinate identity, income, quality, and fraud agents autonomously.',
+        technologies: ['FastAPI', 'LangChain', 'OpenAI GPT-4', 'Celery', 'Redis'],
+        achievements: [
+          'Dynamic workflow routing by loan complexity; autonomous retries and error handling',
+          'Scaled multi-agent coordination without human intervention for routine loans',
+          'Improved throughput to 15–30 minutes per loan end-to-end'
+        ]
+      },
+      {
+        name: 'Identity & Income Verification Agents',
+        description: 'Implemented fuzzy identity resolution and cross-document income verification with confidence scoring and fraud flags.',
+        technologies: ['Python', 'SQLAlchemy', 'Azure Document Intelligence', 'Custom Matching Algorithms'],
+        achievements: [
+          '95%+ identity resolution accuracy; auto-merge/role assignment with confidence gating',
+          '35% accuracy lift on income validation; 45% fraud reduction on income discrepancies',
+          'Automated actions: approve/approve-with-notes/manual-review based on thresholds'
+        ]
+      },
+      {
+        name: 'Document Quality & Platform Integration',
+        description: 'Shipped quality checks and end-to-end plumbing (auth, storage, tasks) to production.',
+        technologies: ['Firebase JWT Auth', 'PostgreSQL', 'Cloudinary', 'Railway'],
+        achievements: [
+          'Instant doc quality triage (accept/warn/reject) with confidence scoring',
+          'Tracked all agent decisions in Postgres for auditability and underwriter review',
+          'Production deployment with async workers for long-running AI/OCR tasks'
+        ]
+      }
+    ],
+    teamwork: 'Partnered with underwriters, compliance, and product to align AI agent decisions with risk policies and SLA goals.',
+    impact: 'Reduced processing time from 4–8 hours to 15–30 minutes per loan; +35% accuracy, -45% fraud flags; higher underwriter throughput with full audit trails.',
+    skills: ['FastAPI', 'LangChain', 'Agentic AI', 'OpenAI GPT-4', 'Celery/Redis', 'PostgreSQL', 'Azure Document Intelligence', 'SQLAlchemy', 'JWT Auth', 'Production Ops'],
+    companyInfo: {
+      focus: 'AI-powered mortgage automation',
+      mission: 'Accelerate loan processing with safer, more accurate AI decisions.'
+    }
+  },
+  {
     id: 'stanford-sal',
     company: 'Stanford Accelerator for Learning',
     role: 'Software Engineer Intern',
