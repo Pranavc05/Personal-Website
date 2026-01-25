@@ -14,7 +14,7 @@ const contactReasons = [
   {
     icon: '💼',
     title: 'Internship Opportunities',
-    description: 'Looking for summer 2025 internships in AI/ML, full-stack development, or product engineering.',
+    description: 'Looking for summer 2026 internships in AI/ML, full-stack development, or product engineering.',
     action: 'Discuss Opportunities'
   },
   {
