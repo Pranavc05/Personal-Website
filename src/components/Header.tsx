@@ -81,8 +81,8 @@ export function Header() {
 
           {/* Resume download */}
           <a
-            href="/resume.pdf"
-            download
+            href="/resume.pdf?v=20260716"
+            download="Pranav_Chandrasekhar_Resume.pdf"
             className="btn-primary"
           >
             <span>Download Resume</span>
@@ -151,8 +151,8 @@ export function Header() {
                 )}
 
                 <a
-                  href="/resume.pdf"
-                  download
+                  href="/resume.pdf?v=20260716"
+                  download="Pranav_Chandrasekhar_Resume.pdf"
                   className="btn-primary"
                   onClick={() => setMobileMenuOpen(false)}
                 >

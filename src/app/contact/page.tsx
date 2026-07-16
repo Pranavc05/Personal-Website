@@ -222,8 +222,8 @@ export default function ContactPage() {
             </Link>
 
             <a
-              href="/resume.pdf"
-              download
+              href="/resume.pdf?v=20260716"
+              download="Pranav_Chandrasekhar_Resume.pdf"
               className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all group"
             >
               <div className="text-2xl mb-3">📄</div>

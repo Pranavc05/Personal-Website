@@ -60,8 +60,8 @@ export function Footer() {
               </a>
               
               <a
-                href="/resume.pdf"
-                download
+                href="/resume.pdf?v=20260716"
+                download="Pranav_Chandrasekhar_Resume.pdf"
                 className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300 hover:text-primary-500 transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
