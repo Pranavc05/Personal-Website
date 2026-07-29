@@ -46,7 +46,7 @@ export function Hero() {
         <div className="max-w-2xl mx-auto">
           <p className="text-lg leading-8 text-gray-600 dark:text-gray-300">
             I'm a CS student at <span className="font-semibold text-primary-500">Indiana University</span> building 
-            production AI systems that solve real-world problems. My projects — KAI, DataForge, AutoSlate, DocuSynth, and Worksheet Generator — 
+            production AI systems that solve real-world problems. My projects — KAI, PAWS, AutoSlate, DocuSynth, and Worksheet Generator — 
             showcase enterprise-scale engineering with measurable impact.
           </p>
         </div>
@@ -92,10 +92,10 @@ export function Hero() {
           </div>
           
           <div className="group cursor-pointer">
-            <Link href="/projects/dataforge" className="block p-6 rounded-lg bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border border-blue-200 dark:border-blue-700 hover:from-blue-100 hover:to-blue-150 dark:hover:from-blue-900/30 dark:hover:to-blue-800/30 transition-all">
-              <div className="font-semibold text-blue-600 dark:text-blue-400">DataForge</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">AI Data Platform</div>
-              <div className="text-xs text-blue-500 dark:text-blue-400 mt-2 font-medium">67% performance ↑</div>
+            <Link href="/projects/paws" className="block p-6 rounded-lg bg-gradient-to-br from-amber-50 to-teal-50 dark:from-amber-900/20 dark:to-teal-800/20 border border-amber-200 dark:border-amber-700 hover:from-amber-100 hover:to-teal-100 dark:hover:from-amber-900/30 dark:hover:to-teal-800/30 transition-all">
+              <div className="font-semibold text-amber-700 dark:text-amber-300">PAWS</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">AI Peer Writing Tutor</div>
+              <div className="text-xs text-teal-600 dark:text-teal-400 mt-2 font-medium">DoE · GSU · Stanford HAI</div>
             </Link>
           </div>
           

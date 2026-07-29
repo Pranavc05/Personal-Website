@@ -39,6 +39,8 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Featured Work</h3>
             <ul className="space-y-2">
+              <li><Link href="/projects/kai" className="text-sm text-gray-600 dark:text-gray-300 hover:text-primary-500 transition-colors">KAI</Link></li>
+              <li><Link href="/projects/paws" className="text-sm text-gray-600 dark:text-gray-300 hover:text-primary-500 transition-colors">PAWS</Link></li>
               <li><Link href="/projects/autoslate" className="text-sm text-gray-600 dark:text-gray-300 hover:text-primary-500 transition-colors">AutoSlate</Link></li>
               <li><Link href="/projects/docusynth" className="text-sm text-gray-600 dark:text-gray-300 hover:text-primary-500 transition-colors">DocuSynth AI</Link></li>
               <li><Link href="/projects/spedtree" className="text-sm text-gray-600 dark:text-gray-300 hover:text-primary-500 transition-colors">Worksheet Generator</Link></li>

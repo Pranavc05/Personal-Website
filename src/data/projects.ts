@@ -74,6 +74,52 @@ export const projects: Project[] = [
     demoUrl: 'https://youtu.be/qYmZIkwEkoQ',
   },
   {
+    id: 'paws',
+    title: 'PAWS (Peer-Assisted Writing Strategies)',
+    subtitle: 'AI Peer Writing Tutor',
+    oneLiner: 'AI peer handwriting coach for kindergarteners that teaches lowercase letters through I Do / We Do / You Do, with Claude vision scoring and spoken feedback.',
+    description: 'PAWS is an AI-assisted handwriting coaching web MVP for ages 5–6 who are just learning lowercase letter formation. Built in collaboration with Georgia State University and Stanford HAI and funded by the U.S. Department of Education, it replaces a human peer tutor with Buddy—an AI coach that demonstrates, scaffolds, and evaluates handwriting in real time through animation, audio, and visual feedback rather than dense text.',
+    problem: 'Kindergarten students often cannot read independently, so text-heavy handwriting apps fail them. Human peer tutoring does not scale, and early writers need patient, multimodal coaching with kindergarten-appropriate leniency for shaky strokes—plus clear fails for wrong letters, giant sizing, and letters far off the lines.',
+    solution: 'Digitized the evidence-informed Peer-Assisted Writing Strategies model into a gradual-release flow: I Do (stroke-by-stroke demo), We Do (demo fades for active recall), and You Do (independent practice). Claude vision scores redrawn strokes with letter-specific rubrics; ElevenLabs narrates kid-facing cues; adaptive scaffolding escalates hints and can demote back to earlier phases.',
+    role: 'Applied AI Engineer — collaborated with another Applied AI Engineer, three Stanford HAI researchers, and Georgia State University faculty on instructional flow, drawing capture, Claude vision scoring, and multimodal feedback.',
+    techStack: [
+      'React',
+      'TypeScript',
+      'TanStack Start/Router',
+      'Vite',
+      'Tailwind CSS',
+      'SVG Canvas',
+      'Claude Vision',
+      'ElevenLabs',
+    ],
+    impact: [
+      'Proved the full instructional loop—I Do, We Do, You Do—with adaptive scaffolding and phase demotion',
+      'Built Claude vision scoring path with kindergarten-teacher-lenient rubrics and geometric fallback',
+      'Delivered multimodal, non-reading-dependent feedback via Buddy moods, icons, chimes, and ElevenLabs narration',
+      'Laid the product path from browser web MVP toward a future iPad app with Apple Pencil and PencilKit',
+    ],
+    keyFeatures: [
+      'Buddy mascot coaches with animation, spoken audio, and icon feedback for placement, size, shape, or success',
+      'SVG pointer-capture canvas with topline, midline, and baseline guides on ruled kindergarten paper',
+      'Letter practice for a, b, c, o, and t with stroke redraw → clean PNG → Claude vision evaluation',
+      'Structured scoring issues with kid-facing spoken cues (including dual cues) and hard placement gates',
+      'Hidden teacher ?dev=1 panel for scores/scorer metadata and configurable You Do repetition targets',
+    ],
+    challenges: [
+      'Balancing kindergarten-appropriate leniency with clear fails for wrong letters and extreme placement/size errors',
+      'Designing active-recall We Do practice so demos fade instead of becoming permanent tracing ghosts',
+      'Falling back to geometric scoring when vision scoring is unavailable while keeping feedback consistent',
+    ],
+    metrics: [
+      { label: 'Status', value: 'Web MVP' },
+      { label: 'Letters', value: 'a b c o t' },
+      { label: 'Funding', value: 'U.S. DoE' },
+      { label: 'Partners', value: 'GSU + Stanford HAI' },
+      { label: 'Scoring', value: 'Claude Vision' },
+      { label: 'Audio', value: 'ElevenLabs' },
+    ],
+  },
+  {
     id: 'dataforge',
     title: 'DataForge',
     subtitle: 'AI Data Platform',
@@ -260,6 +306,12 @@ export const projects: Project[] = [
 ]
 
 export const timelineData = [
+  {
+    year: '2026',
+    title: 'PAWS Web MVP',
+    description: 'Built PAWS, an AI peer handwriting coach for kindergarteners, in collaboration with Georgia State University and Stanford HAI (U.S. Department of Education funded).',
+    type: 'project' as const
+  },
   {
     year: '2025',
     title: 'KAI Multi-District Launch',
