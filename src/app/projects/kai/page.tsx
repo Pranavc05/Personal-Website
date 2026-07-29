@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { projects } from '@/data/projects'
 import { TechBadge } from '@/components/TechBadge'
 import { MetricsGrid } from '@/components/MetricsGrid'
+import { LoomEmbed } from '@/components/LoomEmbed'
 
 const project = projects.find((p) => p.id === 'kai')
 if (!project) {
@@ -63,22 +64,32 @@ export default function KAIPage() {
         </div>
       </section>
 
-      {/* Demo CTA */}
+      {/* Demo Video */}
       <section className="py-16 px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-            See KAI in Action
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            Live demo video coming soon. Want a walkthrough? I’ll show the teacher dashboard, real-time analytics, and AI-evaluated feedback that power KAI across districts.
-          </p>
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+              See KAI in Action
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300">
+              Watch the live demo of the teacher dashboard, real-time analytics, and AI-evaluated feedback that power KAI across districts.
+            </p>
+          </div>
+
+          <LoomEmbed
+            youtubeId={projectData.youtubeId}
+            title={`${projectData.title} Live Demo`}
+          />
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              href="mailto:pranav2005.chandrasekhar@gmail.com?subject=KAI%20Demo%20Request&body=Hi%20Pranav%2C%0A%0AI%27d%20like%20to%20see%20a%20demo%20of%20KAI%20(teacher%20dashboard%2C%20analytics%2C%20AI%20feedback).%0A%0AThanks!"
+            <a
+              href={projectData.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary"
             >
-              <span>Request Live Demo</span>
-            </Link>
+              <span>Watch on YouTube</span>
+            </a>
             <Link
               href="https://cluo.ai"
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus-visible"

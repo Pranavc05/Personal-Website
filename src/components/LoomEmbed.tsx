@@ -4,12 +4,29 @@ import { useState } from 'react'
 
 interface LoomEmbedProps {
   embedId?: string
+  youtubeId?: string
   videoFileName?: string
   title: string
 }
 
-export function LoomEmbed({ embedId, videoFileName, title }: LoomEmbedProps) {
+export function LoomEmbed({ embedId, youtubeId, videoFileName, title }: LoomEmbedProps) {
   const [showVideo, setShowVideo] = useState(false)
+
+  // YouTube embed
+  if (youtubeId) {
+    return (
+      <div className="video-container">
+        <iframe
+          src={`https://www.youtube.com/embed/${youtubeId}`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="w-full h-full absolute top-0 left-0"
+          title={title}
+        ></iframe>
+      </div>
+    )
+  }
 
   // If we have a real Loom embed ID, show the iframe
   if (embedId && !embedId.startsWith('placeholder-')) {

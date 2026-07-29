@@ -14,6 +14,7 @@ export interface Project {
   demoUrl?: string
   githubUrl?: string
   loomEmbedId?: string
+  youtubeId?: string
   videoFileName?: string
   metrics: {
     label: string
@@ -69,8 +70,8 @@ export const projects: Project[] = [
       { label: 'Uptime', value: '99.5%' },
       { label: 'API Speedup', value: '10–100x' }
     ],
-    loomEmbedId: 'placeholder-kai-loom-id',
-    videoFileName: 'kai-demo.mp4'
+    youtubeId: 'qYmZIkwEkoQ',
+    demoUrl: 'https://youtu.be/qYmZIkwEkoQ',
   },
   {
     id: 'dataforge',
