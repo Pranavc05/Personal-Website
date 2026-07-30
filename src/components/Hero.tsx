@@ -103,7 +103,7 @@ export function Hero() {
             <Link href="/projects/autoslate" className="block p-6 rounded-lg bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:bg-white/80 dark:hover:bg-gray-800/80 transition-all">
               <div className="font-semibold text-primary-500">AutoSlate</div>
               <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">AI Phone Agent</div>
-              <div className="text-xs text-gray-500 dark:text-gray-500 mt-2">Live at 4+ restaurants</div>
+              <div className="text-xs text-gray-500 dark:text-gray-500 mt-2">Tested in 2 cafes</div>
             </Link>
           </div>
           

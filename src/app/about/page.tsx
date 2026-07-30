@@ -92,7 +92,7 @@ export default function AboutPage() {
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">🎓</span>
                     <div>
-                      <p className="font-medium text-gray-900 dark:text-white">Junior at Indiana University</p>
+                      <p className="font-medium text-gray-900 dark:text-white">Senior at Indiana University</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">Computer Science + Informatics</p>
                     </div>
                   </div>

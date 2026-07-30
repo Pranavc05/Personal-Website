@@ -188,7 +188,7 @@ export const projects: Project[] = [
       'Railway'
     ],
     impact: [
-      'Live at 4 restaurants — 95%+ call answer rate',
+      'Got to test it out in 2 cafes — 95%+ call answer rate',
       '40% increase in reservations'
     ],
     keyFeatures: [
@@ -205,7 +205,7 @@ export const projects: Project[] = [
       'Implemented graceful degradation for partial service failures'
     ],
     metrics: [
-      { label: 'Restaurants Served', value: '4+' },
+      { label: 'Cafes Tested', value: '2' },
       { label: 'Call Answer Rate', value: '95%+' },
       { label: 'Response Time', value: '<200ms' },
       { label: 'Languages Supported', value: '50+' },
@@ -333,7 +333,7 @@ export const timelineData = [
   {
     year: '2024',
     title: 'AutoSlate Launch',
-    description: 'Built and deployed AI phone agent for restaurants. Currently serving 4+ active restaurant clients.',
+    description: 'Built and deployed AI phone agent for restaurants. Got to test it out in 2 cafes.',
     type: 'project' as const
   },
   {
