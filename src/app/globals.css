@@ -2,32 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 31, 29, 25;
+  --background-rgb: 247, 241, 230;
+  --paper: #f7f1e6;
+  --ink: #1f1d19;
+  --crimson: #990000;
+  --rule: rgba(31, 29, 25, 0.12);
+  --margin-rule: rgba(153, 0, 0, 0.35);
 }
 
-[data-theme="dark"] {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+.dark {
+  --foreground-rgb: 247, 241, 230;
+  --background-rgb: 21, 20, 17;
+  --paper: #151411;
+  --ink: #f7f1e6;
+  --crimson: #e55d5d;
+  --rule: rgba(247, 241, 230, 0.12);
+  --margin-rule: rgba(229, 93, 93, 0.4);
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(var(--background-rgb));
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -38,71 +37,111 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100 dark:bg-gray-800;
+  background: var(--paper);
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-400 dark:bg-gray-600 rounded-md;
+  background: rgba(153, 0, 0, 0.35);
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-500 dark:bg-gray-500;
+  background: rgba(153, 0, 0, 0.55);
 }
 
-/* Glassmorphism effects */
-.glass {
-  @apply backdrop-blur-sm bg-white/10 border border-white/20;
+/* Notebook paper field */
+.notebook-paper {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--rule) 1px, transparent 1px);
+  background-size: 100% 2rem;
+  background-position: 0 0.5rem;
 }
 
-.glass-dark {
-  @apply backdrop-blur-sm bg-black/10 border border-black/20;
+.notebook-margin {
+  position: relative;
 }
 
-/* Gradient text */
-.gradient-text {
-  @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
-}
-
-/* Button hover effects */
-.btn-primary {
-  @apply relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white transition-all bg-primary-500 rounded-lg hover:bg-primary-600;
-}
-
-.btn-primary::before {
-  @apply absolute inset-0 w-0 bg-primary-600 transition-all duration-300 ease-out group-hover:w-full;
+.notebook-margin::before {
   content: '';
+  position: absolute;
+  left: 2.5rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--margin-rule);
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .notebook-margin::before {
+    left: 1.25rem;
+  }
+}
+
+/* Brand text — solid crimson, not gradient slop */
+.brand-text {
+  @apply text-crimson-500 dark:text-crimson-400 font-serif;
+}
+
+.ink-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--crimson);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 2px;
+}
+
+.annotation {
+  @apply font-serif italic text-sm text-ink-400 dark:text-cream-300 border-l-2 border-crimson-500 pl-3;
+}
+
+.flat-field {
+  @apply bg-cream-100 dark:bg-ink-800;
+}
+
+.ruled-section {
+  @apply border-t border-ink-100 dark:border-ink-600;
+}
+
+/* Primary button — flat crimson, high-contrast label in both themes */
+.btn-primary {
+  @apply relative inline-flex items-center justify-center px-6 py-3 font-medium text-white bg-crimson-500 hover:bg-crimson-600 transition-colors border border-crimson-700;
 }
 
 .btn-primary > span {
   @apply relative z-10;
 }
 
-/* Loading animation */
-@keyframes pulse-slow {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
-  }
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 font-medium text-ink-700 dark:text-cream-100 bg-transparent border border-ink-300 dark:border-ink-500 hover:border-crimson-500 hover:text-crimson-500 dark:hover:text-crimson-400 transition-colors;
 }
 
-.animate-pulse-slow {
-  animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Focus visible styles for accessibility */
+/* Focus visible */
 .focus-visible:focus-visible {
-  @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900;
+  @apply outline-none ring-2 ring-crimson-500 ring-offset-2 ring-offset-cream-100 dark:ring-offset-ink-800;
 }
 
-/* Video container styles */
+/* Video container */
 .video-container {
-  @apply relative w-full overflow-hidden rounded-lg shadow-lg;
+  @apply relative w-full overflow-hidden border border-ink-200 dark:border-ink-600;
   aspect-ratio: 16 / 9;
 }
 
 .video-container iframe,
 .video-container video {
   @apply absolute inset-0 w-full h-full object-cover;
+}
+
+/* Photo placeholder field */
+.photo-field {
+  @apply relative flex items-center justify-center bg-cream-200 dark:bg-ink-700 border border-ink-200 dark:border-ink-500 overflow-hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.photo-field img {
+  @apply absolute inset-0 h-full w-full object-cover object-top;
+}
+
+.photo-caption {
+  @apply absolute bottom-0 left-0 right-0 px-3 py-2 text-xs font-mono uppercase tracking-wider bg-ink-800/80 text-cream-100;
 }

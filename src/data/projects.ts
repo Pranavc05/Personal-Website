@@ -103,7 +103,7 @@ export const projects: Project[] = [
       'SVG pointer-capture canvas with topline, midline, and baseline guides on ruled kindergarten paper',
       'Letter practice for a, b, c, o, and t with stroke redraw → clean PNG → Claude vision evaluation',
       'Structured scoring issues with kid-facing spoken cues (including dual cues) and hard placement gates',
-      'Hidden teacher ?dev=1 panel for scores/scorer metadata and configurable You Do repetition targets',
+      'Hidden teacher debug panel for scores, scorer metadata, and You Do practice settings',
     ],
     challenges: [
       'Balancing kindergarten-appropriate leniency with clear fails for wrong letters and extreme placement/size errors',
@@ -355,11 +355,7 @@ export const personalInfo = {
   title: 'Software/AI Engineer',
   location: 'Indiana University',
   email: 'pranav2005.chandrasekhar@gmail.com',
-  bio: `I'm Pranav Chandrasekhar — a CS student at Indiana University who builds AI-first products for real users. I design and ship full-stack systems (FastAPI, Node, Next.js) that solve production problems: automating restaurant calls, generating docs for codebases, and creating accessible educational materials.
-  
-  Beyond code, I'm motivated by a mission: building technology that's inclusive, practical, and trustworthy. My long-term goal is to work at the intersection of AI, education, and accessibility, creating tools that empower people and close gaps in opportunity.
-  
-  When I'm not coding, you can usually find me playing basketball or playing with my two Siberian Huskies!`,
+  bio: `I'm Pranav, a CS student at Indiana University who loves building things that people actually end up using. Most of my work has been in AI, education, and security, where I've had the chance to build products alongside teachers, students, researchers, and engineers instead of guessing what users want. That's probably my favorite part of software engineering—talking to the people you're building for, understanding their problems, and turning those conversations into something genuinely useful. Outside of school, you'll usually find me chasing interesting startup ideas, playing basketball, or hanging out with my two Siberian Huskies.`,
   
   oneLiners: [
     'AI-driven product builder — shipped systems that cut teacher prep time by 90% and automate live restaurant calls.',

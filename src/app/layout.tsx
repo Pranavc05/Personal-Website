@@ -1,30 +1,42 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { IBM_Plex_Sans, IBM_Plex_Mono, Source_Serif_4 } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { RecruitingBanner } from '@/components/RecruitingBanner'
 
-const inter = Inter({ 
+const plex = IBM_Plex_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['400', '500', '600'],
+  variable: '--font-plex',
+  display: 'swap',
 })
 
-const playfair = Playfair_Display({ 
+const plexMono = IBM_Plex_Mono({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  weight: ['400', '500'],
+  variable: '--font-plex-mono',
+  display: 'swap',
+})
+
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  weight: ['400', '600'],
+  variable: '--font-source-serif',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://personal-website-seven-theta-80.vercel.app'),
   title: 'Pranav Chandrasekhar — Software/AI Engineer',
-  description: 'I build scalable backend systems, AI products, and polished front ends that deliver measurable impact. AutoSlate, DocuSynth, and Worksheet Generator are live proofs.',
-  keywords: ['Pranav Chandrasekhar', 'AI Engineer', 'Full Stack Developer', 'Indiana University', 'AutoSlate', 'DocuSynth', 'Worksheet Generator'],
+  description: 'Applied AI engineer at Indiana University building education and product systems — KAI, PAWS, AutoSlate, and more. Open to Fall 2026 internships and new grad 2027.',
+  keywords: ['Pranav Chandrasekhar', 'AI Engineer', 'Full Stack Developer', 'Indiana University', 'KAI', 'PAWS', 'AutoSlate', 'DocuSynth'],
   authors: [{ name: 'Pranav Chandrasekhar' }],
   creator: 'Pranav Chandrasekhar',
   openGraph: {
     title: 'Pranav Chandrasekhar — Software/AI Engineer',
-    description: 'I build scalable backend systems, AI products, and polished front ends that deliver measurable impact.',
+    description: 'Applied AI engineer building education and product systems. Open to Fall 2026 internships and new grad 2027.',
     url: 'https://pranav-portfolio-theta.vercel.app',
     siteName: 'Pranav Chandrasekhar Portfolio',
     locale: 'en_US',
@@ -33,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Pranav Chandrasekhar — Software/AI Engineer',
-    description: 'I build scalable backend systems, AI products, and polished front ends that deliver measurable impact.',
+    description: 'Applied AI engineer building education and product systems. Open to Fall 2026 internships and new grad 2027.',
   },
   robots: {
     index: true,
@@ -47,12 +59,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${plex.variable} ${plexMono.variable} ${sourceSerif.variable}`}
+      suppressHydrationWarning
+    >
+      <body className={`${plex.className} antialiased`} suppressHydrationWarning>
         <ThemeProvider>
-          <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+          <div className="min-h-screen bg-cream-100 dark:bg-ink-800 text-ink-700 dark:text-cream-100">
             <Header />
-            <main className="pt-16">
+            <RecruitingBanner />
+            <main className="pt-28 sm:pt-[6.75rem]">
               {children}
             </main>
             <Footer />

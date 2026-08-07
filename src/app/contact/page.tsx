@@ -3,244 +3,139 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Contact | Pranav Chandrasekhar',
-  description: 'Get in touch with Pranav Chandrasekhar to discuss AI projects, collaboration opportunities, or internships.',
-  openGraph: {
-    title: 'Contact | Pranav Chandrasekhar',
-    description: 'Get in touch with Pranav Chandrasekhar to discuss AI projects, collaboration opportunities, or internships.',
-  },
+  description:
+    'Get in touch about Fall 2026 internships, new grad 2027 roles, collaborations, or project demos.',
 }
 
 const contactReasons = [
   {
-    icon: '💼',
     title: 'Internship Opportunities',
-    description: 'Looking for Fall 2026 internships in AI/ML, full-stack development, or product engineering.',
-    action: 'Discuss Opportunities'
+    description:
+      'Open to Fall 2026 internships in AI/ML, full-stack development, or product engineering.',
+    action: 'Discuss Opportunities',
   },
   {
-    icon: '🤝',
+    title: 'New Grad 2027',
+    description: 'Exploring full-time roles starting 2027 in applied AI and product engineering.',
+    action: 'New Grad Conversation',
+  },
+  {
     title: 'Collaboration',
-    description: 'Interested in working together on AI projects, hackathons, or open source contributions.',
-    action: 'Start Collaborating'
+    description: 'AI projects, hackathons, or open source — happy to build together.',
+    action: 'Start Collaborating',
   },
   {
-    icon: '🎓',
-    title: 'Mentorship & Advice',
-    description: 'Happy to chat with fellow students about CS, AI development, or building production systems.',
-    action: 'Schedule a Chat'
-  },
-  {
-    icon: '📋',
     title: 'Project Demos',
-    description: 'Want to see AutoSlate, DocuSynth, or SpedTree in action? I can walk you through them.',
-    action: 'Request Demo'
+    description: 'Want a walkthrough of KAI, PAWS, AutoSlate, or another experiment?',
+    action: 'Request Demo',
   },
   {
-    icon: '💡',
+    title: 'Mentorship & Advice',
+    description: 'Chat with fellow students about CS, AI development, or shipping systems.',
+    action: 'Schedule a Chat',
+  },
+  {
     title: 'General Discussion',
-    description: 'Questions about my projects, tech stack choices, or just want to talk about AI and education.',
-    action: 'Let\'s Talk'
-  }
+    description: 'Projects, stack choices, or AI and education — always up for a conversation.',
+    action: "Let's Talk",
+  },
 ]
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-            Get in <span className="gradient-text">Touch</span>
+    <div className="min-h-screen bg-cream-100 dark:bg-ink-800">
+      <section className="border-b border-ink-200 px-6 pb-12 pt-10 dark:border-ink-600 lg:px-8">
+        <div className="mx-auto max-w-3xl">
+          <p className="font-mono text-xs uppercase tracking-wider text-crimson-500">
+            Correspondence
+          </p>
+          <h1 className="mt-3 font-serif text-4xl font-semibold text-ink-800 dark:text-cream-50 sm:text-5xl">
+            Contact
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            I'm always excited to discuss new opportunities, collaborate on projects, 
-            or just chat about AI, education technology, and building things that matter.
+          <p className="mt-4 text-lg text-ink-500 dark:text-cream-300">
+            Open to Fall 2026 internships and new grad roles for 2027.
           </p>
-
-          {/* Availability status */}
-          <div className="mt-8 inline-flex items-center gap-3 px-4 py-2 bg-green-50 dark:bg-green-900/20 rounded-full">
-            <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium text-green-800 dark:text-green-200">
-              Available for Fall 2026 internships
-            </span>
-          </div>
+          <p className="mt-6 font-mono text-sm text-crimson-500">
+            Fall 2026 internships · New grad 2027
+          </p>
         </div>
       </section>
 
-      {/* Contact Methods */}
-      <section className="py-16 px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {/* Primary contact - Email */}
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="group p-8 bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all"
-            >
-              <div className="flex items-center justify-center w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-full mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <svg className="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white text-center mb-3">
-                Email Me Directly
-              </h3>
-              <p className="text-primary-600 dark:text-primary-400 text-center mb-3 font-medium">
-                {personalInfo.email}
-              </p>
-              <p className="text-gray-600 dark:text-gray-300 text-center text-sm">
-                I typically respond within 24 hours. Best for detailed discussions, opportunities, and project inquiries.
-              </p>
-              <div className="mt-4 text-center">
-                <span className="text-primary-500 group-hover:text-primary-600 transition-colors text-sm font-medium">
-                  Send email →
-                </span>
-              </div>
-            </a>
-
-            {/* Quick chat scheduling */}
-            <a
-              href={`mailto:${personalInfo.email}?subject=Let's%20Schedule%20a%20Chat&body=Hi%20Pranav,%0A%0AI'd%20love%20to%20schedule%20a%20quick%20chat%20to%20discuss:%0A%0A-%20[Your%20topic%20here]%0A%0AMy%20availability:%0A-%20[Your%20preferred%20times]%0A%0ALooking%20forward%20to%20connecting!%0A%0ABest,%0A[Your%20name]`}
-              className="group p-8 bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all"
-            >
-              <div className="flex items-center justify-center w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <svg className="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 4a6 6 0 1012 0 6 6 0 00-12 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white text-center mb-3">
-                Schedule a Call
-              </h3>
-              <p className="text-purple-600 dark:text-purple-400 text-center mb-3 font-medium">
-                15-30 min chat
-              </p>
-              <p className="text-gray-600 dark:text-gray-300 text-center text-sm">
-                Perfect for quick introductions, project discussions, or exploring collaboration opportunities.
-              </p>
-              <div className="mt-4 text-center">
-                <span className="text-purple-500 group-hover:text-purple-600 transition-colors text-sm font-medium">
-                  Schedule time →
-                </span>
-              </div>
-            </a>
-          </div>
-
-          {/* Contact reasons grid */}
-          <div>
-            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-              What Would You Like to Discuss?
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {contactReasons.map((reason, index) => (
-                <a
-                  key={index}
-                  href={`mailto:${personalInfo.email}?subject=${encodeURIComponent(reason.action)} - ${encodeURIComponent(reason.title)}&body=Hi%20Pranav,%0A%0AI'm%20reaching%20out%20regarding%20${encodeURIComponent(reason.title.toLowerCase())}%0A%0A[Please%20share%20more%20details%20about%20what%20you'd%20like%20to%20discuss]%0A%0ALooking%20forward%20to%20connecting!%0A%0ABest,%0A[Your%20name]`}
-                  className="group p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-primary-300 dark:hover:border-primary-600 transition-all"
-                >
-                  <div className="text-center space-y-4">
-                    <div className="text-3xl mx-auto">{reason.icon}</div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">{reason.title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                      {reason.description}
-                    </p>
-                    <div className="text-primary-500 group-hover:text-primary-600 transition-colors text-sm font-medium">
-                      {reason.action} →
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
+      <section className="px-6 py-12 lg:px-8">
+        <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+          <a
+            href={`mailto:${personalInfo.email}`}
+            className="border border-ink-200 bg-cream-50 p-6 dark:border-ink-600 dark:bg-ink-900"
+          >
+            <p className="font-mono text-xs uppercase tracking-wider text-ink-400">Email</p>
+            <p className="mt-3 font-serif text-xl text-ink-800 dark:text-cream-100">
+              {personalInfo.email}
+            </p>
+            <p className="mt-2 text-sm text-ink-500 dark:text-cream-300">
+              Usually within 24 hours. Best for opportunities and detailed discussions.
+            </p>
+          </a>
+          <a
+            href={`mailto:${personalInfo.email}?subject=Let's%20Schedule%20a%20Chat`}
+            className="border border-ink-200 bg-cream-50 p-6 dark:border-ink-600 dark:bg-ink-900"
+          >
+            <p className="font-mono text-xs uppercase tracking-wider text-ink-400">Schedule</p>
+            <p className="mt-3 font-serif text-xl text-ink-800 dark:text-cream-100">
+              15–30 min chat
+            </p>
+            <p className="mt-2 text-sm text-ink-500 dark:text-cream-300">
+              Quick introductions, demos, or collaboration ideas.
+            </p>
+          </a>
         </div>
       </section>
 
-      {/* Response time and location */}
-      <section className="py-16 px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
-                <div className="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full mx-auto mb-4">
-                  <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Response Time</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  I typically respond to emails within <strong>24 hours</strong>, often much sooner. 
-                  For urgent matters, mention "urgent" in the subject line.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
-                <div className="flex items-center justify-center w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full mx-auto mb-4">
-                  <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Location & Time Zone</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Based in <strong>{personalInfo.location}</strong> (EST). 
-                  I'm flexible with scheduling calls across different time zones.
-                </p>
-              </div>
-            </div>
-
-            {/* Fun personal touch */}
-            <div className="bg-gradient-to-r from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20 rounded-lg p-6">
-              <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold">Fun fact:</span> I love connecting with fellow developers, students, and anyone passionate about using technology for good. 
-                Don't hesitate to reach out - I enjoy meeting new people and learning about different perspectives! 
-                And if you're ever in Bloomington and want to shoot some hoops, let me know! 🏀
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Alternative ways to connect */}
-      <section className="py-16 px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-            Other Ways to Connect
+      <section className="border-t border-ink-200 px-6 py-12 dark:border-ink-600 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="font-serif text-2xl text-ink-800 dark:text-cream-100">
+            What would you like to discuss?
           </h2>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-            <Link
-              href="/projects"
-              className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all group"
-            >
-              <div className="text-2xl mb-3">🚀</div>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Explore My Projects</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                Get a detailed look at AutoSlate, DocuSynth, and SpedTree to understand my technical approach.
-              </p>
-              <div className="mt-4 text-primary-500 group-hover:text-primary-600 transition-colors text-sm font-medium">
-                View Projects →
-              </div>
-            </Link>
-
-            <a
-              href="/resume.pdf?v=20260716"
-              download="Pranav_Chandrasekhar_Resume.pdf"
-              className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all group"
-            >
-              <div className="text-2xl mb-3">📄</div>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Download Resume</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                Get my latest resume with detailed experience, skills, and project information.
-              </p>
-              <div className="mt-4 text-primary-500 group-hover:text-primary-600 transition-colors text-sm font-medium">
-                Download PDF →
-              </div>
-            </a>
+          <div className="mt-6 border border-ink-200 dark:border-ink-600">
+            {contactReasons.map((reason) => (
+              <a
+                key={reason.title}
+                href={`mailto:${personalInfo.email}?subject=${encodeURIComponent(reason.action)}`}
+                className="block border-b border-ink-200 px-5 py-5 last:border-b-0 hover:bg-cream-50 dark:border-ink-600 dark:hover:bg-ink-900"
+              >
+                <div className="flex items-baseline justify-between gap-4">
+                  <h3 className="font-serif text-lg text-ink-800 dark:text-cream-100">
+                    {reason.title}
+                  </h3>
+                  <span className="font-mono text-xs uppercase tracking-wider text-crimson-500">
+                    {reason.action} →
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-ink-500 dark:text-cream-300">
+                  {reason.description}
+                </p>
+              </a>
+            ))}
           </div>
-
-          <p className="text-gray-600 dark:text-gray-300">
-            Looking forward to connecting with you! Whether it's about internships, projects, or just a friendly chat about tech.
-          </p>
         </div>
+      </section>
+
+      <section className="border-t border-ink-200 px-6 py-12 dark:border-ink-600 lg:px-8">
+        <div className="mx-auto flex max-w-4xl flex-col gap-4 sm:flex-row">
+          <Link href="/projects" className="btn-secondary flex-1 text-center">
+            Browse experiments
+          </Link>
+          <a
+            href="/resume.pdf?v=20260716"
+            download="Pranav_Chandrasekhar_Resume.pdf"
+            className="btn-primary flex-1 text-center"
+          >
+            <span>Download resume</span>
+          </a>
+        </div>
+        <p className="annotation mx-auto mt-10 max-w-4xl">
+          Based in {personalInfo.location} (EST). If you&apos;re ever in Bloomington and want to
+          shoot hoops, say so.
+        </p>
       </section>
     </div>
   )

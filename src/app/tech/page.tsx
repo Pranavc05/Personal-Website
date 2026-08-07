@@ -1,5 +1,3 @@
-import { projects } from '@/data/projects'
-import { TechBadge } from '@/components/TechBadge'
 import Link from 'next/link'
 
 export const metadata = {
@@ -16,37 +14,37 @@ const techCategories = [
     name: 'AI & Machine Learning',
     description: 'Models, APIs, and intelligent systems',
     techs: ['OpenAI GPT-3.5', 'GPT-4o-mini', 'DALL-E 3', 'NVIDIA NeMo', 'LangChain', 'PyTorch'],
-    color: 'bg-purple-100 dark:bg-purple-900/30 border-purple-200 dark:border-purple-700'
+    color: 'border-ink-200 dark:border-ink-600 bg-cream-50 dark:bg-ink-900'
   },
   {
     name: 'Backend & APIs',
     description: 'Server architecture and data processing',
     techs: ['FastAPI', 'Next.js', 'Node.js', 'Express.js', 'RESTful APIs'],
-    color: 'bg-blue-100 dark:bg-blue-900/30 border-blue-200 dark:border-blue-700'
+    color: 'border-ink-200 dark:border-ink-600 bg-cream-50 dark:bg-ink-900'
   },
   {
     name: 'Databases & Storage',
     description: 'Data persistence and management',
     techs: ['PostgreSQL', 'MongoDB', 'Vector Databases', 'Redis Caching'],
-    color: 'bg-green-100 dark:bg-green-900/30 border-green-200 dark:border-green-700'
+    color: 'border-ink-200 dark:border-ink-600 bg-cream-50 dark:bg-ink-900'
   },
   {
     name: 'Cloud & Infrastructure',
     description: 'Deployment and scalability',
     techs: ['Docker', 'Railway', 'Render.com', 'Vercel', 'AWS', 'CDN'],
-    color: 'bg-orange-100 dark:bg-orange-900/30 border-orange-200 dark:border-orange-700'
+    color: 'border-ink-200 dark:border-ink-600 bg-cream-50 dark:bg-ink-900'
   },
   {
     name: 'Frontend & UI',
     description: 'User interfaces and experiences',
     techs: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Responsive Design'],
-    color: 'bg-pink-100 dark:bg-pink-900/30 border-pink-200 dark:border-pink-700'
+    color: 'border-ink-200 dark:border-ink-600 bg-cream-50 dark:bg-ink-900'
   },
   {
     name: 'External APIs & Services',
     description: 'Third-party integrations',
     techs: ['Twilio', 'ElevenLabs', 'Auth0', 'Payment Processing', 'SMS APIs'],
-    color: 'bg-indigo-100 dark:bg-indigo-900/30 border-indigo-200 dark:border-indigo-700'
+    color: 'border-ink-200 dark:border-ink-600 bg-cream-50 dark:bg-ink-900'
   }
 ]
 
@@ -253,46 +251,35 @@ app.post('/generate-worksheet', async (req, res) => {
   }
 ]
 
+
 export default function TechPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-            Technical <span className="gradient-text">Deep Dive</span>
+    <div className="min-h-screen bg-cream-100 dark:bg-ink-800">
+      <section className="border-b border-ink-200 px-6 pb-12 pt-10 dark:border-ink-600 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <p className="font-mono text-xs uppercase tracking-wider text-crimson-500">Spec sheets</p>
+          <h1 className="mt-3 font-serif text-4xl font-semibold text-ink-800 dark:text-cream-50 sm:text-5xl">
+            Tech deep dive
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Architecture diagrams, code snippets, and infrastructure notes from building 
-            production AI systems. Everything from voice processing pipelines to multi-agent orchestration.
+          <p className="mt-4 max-w-2xl text-lg text-ink-500 dark:text-cream-300">
+            Architecture notes and code from production AI systems — voice pipelines, multi-agent orchestration, and classroom tools.
           </p>
         </div>
       </section>
 
-      {/* Tech Stack Overview */}
-      <section className="py-16 px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            Technology Stack Categories
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {techCategories.map((category, index) => (
-              <div 
-                key={index}
-                className={`p-6 rounded-lg border-2 ${category.color}`}
-              >
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
-                  {category.name}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                  {category.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
+      <section className="px-6 py-12 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="font-serif text-2xl text-ink-800 dark:text-cream-100">Stack categories</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {techCategories.map((category) => (
+              <div key={category.name} className={`border p-5 ${category.color}`}>
+                <h3 className="font-serif text-lg text-ink-800 dark:text-cream-100">{category.name}</h3>
+                <p className="mt-1 text-sm text-ink-500 dark:text-cream-300">{category.description}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
                   {category.techs.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 text-xs font-medium bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md border border-gray-200 dark:border-gray-600"
+                      className="border border-ink-200 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-ink-500 dark:border-ink-600"
                     >
                       {tech}
                     </span>
@@ -304,183 +291,56 @@ export default function TechPage() {
         </div>
       </section>
 
-      {/* Architecture Highlights */}
-      <section className="py-16 px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            System Architecture Highlights
-          </h2>
-          
-          <div className="space-y-12">
-            {architectureHighlights.map((arch, index) => (
-              <div key={index} className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-sm border border-gray-200 dark:border-gray-700">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div className="space-y-6">
-                    <div>
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className="px-3 py-1 text-xs font-medium text-primary-600 dark:text-primary-400 bg-primary-100 dark:bg-primary-900/30 rounded-full">
-                          {arch.project}
-                        </span>
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                          {arch.title}
-                        </h3>
-                      </div>
-                      <p className="text-gray-600 dark:text-gray-300">
-                        {arch.description}
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Features</h4>
-                      <ul className="space-y-2">
-                        {arch.keyFeatures.map((feature, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* Architecture diagram */}
-                  <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-6">
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Data Flow</h4>
-                    <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border-2 border-dashed border-gray-300 dark:border-gray-600">
-                      <pre className="text-xs text-gray-700 dark:text-gray-300 whitespace-pre-wrap font-mono">
-                        {arch.diagram.trim()}
-                      </pre>
-                    </div>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                      Simplified architecture diagram - full technical specifications available on request
-                    </p>
-                  </div>
+      <section className="border-t border-ink-200 px-6 py-12 dark:border-ink-600 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="font-serif text-2xl text-ink-800 dark:text-cream-100">Architecture highlights</h2>
+          <div className="mt-6 space-y-6">
+            {architectureHighlights.map((item) => (
+              <div key={item.project} className="border border-ink-200 bg-cream-50 dark:border-ink-600 dark:bg-ink-900">
+                <div className="border-b border-ink-200 px-5 py-4 dark:border-ink-600">
+                  <p className="font-mono text-xs uppercase tracking-wider text-crimson-500">{item.project}</p>
+                  <h3 className="mt-1 font-serif text-xl text-ink-800 dark:text-cream-100">{item.title}</h3>
+                  <p className="mt-2 text-sm text-ink-500 dark:text-cream-300">{item.description}</p>
                 </div>
+                <pre className="overflow-x-auto border-b border-ink-200 bg-ink-800 px-5 py-4 font-mono text-xs text-cream-100 dark:border-ink-600">
+{item.diagram}
+                </pre>
+                <ul className="space-y-2 px-5 py-4">
+                  {item.keyFeatures.map((feature) => (
+                    <li key={feature} className="text-sm text-ink-600 dark:text-cream-200">— {feature}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Code Snippets */}
-      <section className="py-16 px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            Code Examples
-          </h2>
-          
-          <div className="space-y-8">
-            {codeSnippets.map((snippet, index) => (
-              <div key={index} className="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
-                <div className="px-6 py-4 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
-                      {snippet.title}
-                    </h3>
-                    <span className="px-3 py-1 text-xs font-medium bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
-                      {snippet.language}
-                    </span>
-                  </div>
+      <section className="border-t border-ink-200 px-6 py-12 dark:border-ink-600 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="font-serif text-2xl text-ink-800 dark:text-cream-100">Code notes</h2>
+          <div className="mt-6 space-y-8">
+            {codeSnippets.map((snippet) => (
+              <div key={snippet.title} className="border border-ink-200 dark:border-ink-600">
+                <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-ink-200 px-5 py-3 dark:border-ink-600">
+                  <h3 className="font-serif text-lg text-ink-800 dark:text-cream-100">{snippet.title}</h3>
+                  <span className="font-mono text-xs text-crimson-500">{snippet.language}</span>
                 </div>
-                
-                <div className="p-6">
-                  <div className="bg-gray-900 dark:bg-black rounded-lg p-4 overflow-x-auto">
-                    <pre className="text-sm text-gray-100 dark:text-gray-300">
-                      <code>{snippet.code.trim()}</code>
-                    </pre>
-                  </div>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-3">
-                    This is a simplified example. Full implementation includes error handling, logging, and production optimizations.
-                  </p>
-                </div>
+                <pre className="overflow-x-auto bg-ink-800 p-5 font-mono text-xs leading-relaxed text-cream-100">
+                  <code>{snippet.code}</code>
+                </pre>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Performance & Metrics */}
-      <section className="py-16 px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            Performance Metrics
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-              <div className="text-3xl font-bold text-green-500 mb-2">&lt; 200ms</div>
-              <div className="font-semibold text-gray-900 dark:text-white mb-1">AutoSlate Response</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Voice-to-voice latency</div>
-            </div>
-            
-            <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-              <div className="text-3xl font-bold text-blue-500 mb-2">99.9%</div>
-              <div className="font-semibold text-gray-900 dark:text-white mb-1">System Uptime</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Across all projects</div>
-            </div>
-            
-            <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-              <div className="text-3xl font-bold text-purple-500 mb-2">3x</div>
-              <div className="font-semibold text-gray-900 dark:text-white mb-1">Faster Onboarding</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">DocuSynth AI impact</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Philosophy */}
-      <section className="py-16 px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-            Development Philosophy
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Production-First Mindset</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                Every project is built with real users in mind. From error handling and monitoring 
-                to scalability and security, I prioritize production readiness from day one.
-              </p>
-            </div>
-            
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Iterative Improvement</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                I believe in shipping early, gathering feedback, and continuously improving. 
-                Each project has gone through multiple iterations based on user feedback.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
-            <p className="text-gray-700 dark:text-gray-300 italic">
-              "Good software is not about the complexity of the code, but about solving real problems elegantly. 
-              Every line of code should serve a purpose, and every system should be maintainable by others."
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Want More Technical Details?
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            I love diving deep into technical architecture, discussing trade-offs, and sharing lessons learned. 
-            Let's chat about the nitty-gritty details!
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
-              <span>Technical Discussion</span>
-            </Link>
-            <Link href="/projects" className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors focus-visible">
-              View Project Details
-            </Link>
-          </div>
+      <section className="border-t border-ink-200 px-6 py-16 dark:border-ink-600 lg:px-8">
+        <div className="mx-auto max-w-3xl space-y-6 text-center">
+          <h2 className="font-serif text-3xl text-ink-800 dark:text-cream-100">Want the full walkthrough?</h2>
+          <Link href="/contact" className="btn-primary">
+            <span>Get in touch</span>
+          </Link>
         </div>
       </section>
     </div>

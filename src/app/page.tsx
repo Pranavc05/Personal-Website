@@ -1,12 +1,14 @@
 import { Hero } from '@/components/Hero'
-import { ProjectCarousel } from '@/components/ProjectCarousel'
+import { ProjectGraph } from '@/components/ProjectGraph'
+import { FieldNotes } from '@/components/FieldNotes'
 import { ContactSection } from '@/components/ContactSection'
 
 export default function Home() {
   return (
-    <div className="space-y-32">
+    <div>
       <Hero />
-      <ProjectCarousel />
+      <ProjectGraph />
+      <FieldNotes />
       <ContactSection />
     </div>
   )

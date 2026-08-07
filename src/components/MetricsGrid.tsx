@@ -8,21 +8,26 @@ interface MetricsGridProps {
 }
 
 export function MetricsGrid({ metrics }: MetricsGridProps) {
+  const cols =
+    metrics.length === 4
+      ? 'lg:grid-cols-4'
+      : metrics.length === 5
+        ? 'lg:grid-cols-5'
+        : metrics.length === 6
+          ? 'lg:grid-cols-3'
+          : 'lg:grid-cols-3'
+
   return (
-    <div className={`grid grid-cols-1 sm:grid-cols-2 gap-6 ${
-      metrics.length === 4 ? 'lg:grid-cols-4' : 
-      metrics.length === 5 ? 'lg:grid-cols-5' : 
-      'lg:grid-cols-3'
-    }`}>
-      {metrics.map((metric, index) => (
-        <div 
-          key={index} 
-          className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all group"
+    <div className={`grid grid-cols-1 gap-4 sm:grid-cols-2 ${cols}`}>
+      {metrics.map((metric) => (
+        <div
+          key={metric.label}
+          className="border border-ink-200 bg-cream-50 px-5 py-6 text-center dark:border-ink-600 dark:bg-ink-900"
         >
-          <div className="text-3xl lg:text-4xl font-bold text-primary-500 group-hover:scale-110 transition-transform">
+          <div className="font-serif text-2xl font-semibold text-crimson-500 dark:text-crimson-400 lg:text-3xl">
             {metric.value}
           </div>
-          <div className="text-sm text-gray-600 dark:text-gray-400 mt-2 font-medium">
+          <div className="mt-2 font-mono text-xs uppercase tracking-wider text-ink-400">
             {metric.label}
           </div>
         </div>

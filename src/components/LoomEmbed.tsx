@@ -61,43 +61,33 @@ export function LoomEmbed({ embedId, youtubeId, videoFileName, title }: LoomEmbe
 
   // Default placeholder with action buttons
   return (
-    <div className="video-container bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-lg border border-gray-200 dark:border-gray-700">
+    <div className="video-container border border-ink-200 bg-cream-50 dark:border-ink-600 dark:bg-ink-900">
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-center space-y-6 p-8">
-          <div className="w-20 h-20 mx-auto bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center">
-            <svg className="w-10 h-10 text-primary-500" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
+        <div className="space-y-6 p-8 text-center">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center border border-crimson-500 text-crimson-500">
+            <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
             </svg>
           </div>
-          
-          <div className="space-y-3">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Demo video coming soon! I'm currently recording high-quality demos for all projects.
+
+          <div className="space-y-2">
+            <h3 className="font-serif text-xl text-ink-800 dark:text-cream-100">{title}</h3>
+            <p className="text-sm text-ink-500 dark:text-cream-300">
+              Demo video coming soon — recording high-quality walkthroughs.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col justify-center gap-3 sm:flex-row">
             {videoFileName && (
-              <button
-                onClick={() => setShowVideo(true)}
-                className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-700 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors"
-              >
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-▶️ Watch Demo Video
+              <button onClick={() => setShowVideo(true)} className="btn-primary text-sm">
+                <span>Watch demo video</span>
               </button>
             )}
-            
             <a
-              href="mailto:pranav2005.chandrasekhar@gmail.com?subject=Demo%20Request&body=Hi%20Pranav,%0A%0AI'd%20love%20to%20see%20a%20demo%20of%20your%20projects!"
-              className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              href="mailto:pranav2005.chandrasekhar@gmail.com?subject=Demo%20Request"
+              className="btn-secondary text-sm"
             >
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Request Live Demo
+              Request live demo
             </a>
           </div>
         </div>
